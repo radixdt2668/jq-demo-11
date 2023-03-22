@@ -1,0 +1,129 @@
+// ==========================================================================
+// #Layouts: Extend;
+// ==========================================================================
+
+
+/* Variables
+   ======================================================================== */
+ 
+
+/* Main Nav
+   ======================================================================== */
+%nav-block {
+	display: block; 
+ 
+}
+
+%nav-block-active {
+	 color: red;
+}
+
+%nav-list { 
+  color: red;
+
+}
+
+%nav-item {
+ color: white;
+ background-color: #444c4f;
+ text-align: center;
+}
+
+%nav-link {
+  color: red;
+}
+
+%nav-active {
+  color: red;
+}
+
+.main-nav__item {
+  float: left;
+    width: 100%;
+    display: block;
+    border-top: 1px solid rgba(255,255,255,.1);
+    box-shadow: inset 0 1px 0 0 #35393d;
+}
+
+.main-nav__drop-holder {
+      display: block;
+    float: none;
+  position: relative;    transition: all .4s ease;
+}
+.main-nav__drop-parent {
+      display: block;
+    	float: none;
+height: 47px;
+    line-height: 47px;
+      transition: all .4s ease;
+}
+.main-nav__drop {
+      text-align: center;
+    top: 78px;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    left: -9999px;
+ 	height: 0;
+    transition: opacity .4s ease;
+
+  
+}
+.main-nav__drop-holder {
+      display: block;
+    float: none;
+      position: relative;
+}
+.main-nav__drop-active .main-nav__drop {
+      position: static;
+      height: 100%;
+ 
+}
+ 
+.main-nav__drop-item {
+	    color: #fff;
+    padding: 8px 20px;
+    margin: 0;
+    display: block;
+    border: 0;
+}
+.main-nav__drop-list {
+      background: 0;
+    border-radius: 0;
+    padding: 0;
+    position: static;
+    float: none;
+    text-align: center;
+    box-shadow: none;
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+// ==========================================================================
+// #Main Nav
+// ==========================================================================
+
+.main-nav {
+	@extend %nav-block;
+	&__list {
+	  @extend %nav-list;
+	}
+
+	&__item {
+		@extend %nav-item;
+	}
+
+	&__link {
+		@extend %nav-link;
+		&:hover {
+			@extend %nav-active;
+		}
+		&--active{
+			@extend %nav-link;
+			@extend %nav-active;
+
+		}	
+		
+	}
+
+}

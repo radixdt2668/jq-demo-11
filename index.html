@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jq-demo-11</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Site Header
+     ================================================== -->
+    <header class="site-header">
+      <div class="site-header__main-section">
+        <div class="site-header__main-section--inner">
+          <div class="site-header__head">
+            <button class="site-header__hamburger">
+              <span class="site-header__hamburger--bar"></span>
+            </button>
+          </div>
+          <nav class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <div class="main-nav__drop-holder">
+                  <span class="main-nav__drop-parent">WORK</span>
+                  <div class="main-nav__drop">
+                    <ul class="main-nav__drop-list">
+                      <li class="main-nav__drop-item">
+                        <a href="/work.html">Portfolio</a>
+                      </li>
+                      <li class="main-nav__drop-item">
+                        <a href="/guideme/" target="_blank">GuideMe Plugin</a>
+                      </li>
+                      <li class="main-nav__drop-item">
+                        <a href="/js-custom-forms/" target="_blank"
+                          >JS Custom Forms</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /drop -->
+                </div>
+                <!-- /drop-holder -->
+              </li>
+              <!-- /main-nav__item -->
+              <li class="main-nav__item">
+                <div class="main-nav__drop-holder">
+                  <span class="main-nav__drop-parent">WORK</span>
+                  <div class="main-nav__drop">
+                    <ul class="main-nav__drop-list">
+                      <li class="main-nav__drop-item">
+                        <a href="/work.html">Portfolio</a>
+                      </li>
+                      <li class="main-nav__drop-item">
+                        <a href="/guideme/" target="_blank">GuideMe Plugin</a>
+                      </li>
+                      <li class="main-nav__drop-item">
+                        <a href="/js-custom-forms/" target="_blank"
+                          >JS Custom Forms</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /drop -->
+                </div>
+                <!-- /drop-holder -->
+              </li>
+              <!-- /main-nav__item -->
+            </ul>
+          </nav>
+          <!-- /main-nav -->
+        </div>
+      </div>
+      <!-- /site-header__main-section -->
+    </header>
+    <!-- /site-header -->
+    <script>
+        $(document).ready(function() {
+
+//Submenu
+$('.main-nav__drop-parent').on('click', function() {
+  var dh = $(this).parent('.main-nav__drop-holder');
+  dh.toggleClass('main-nav__drop-active');
+  //$('body').append('<div id="hide"></div>');
+});
+
+
+
+
+});
+    </script>
+  </body>
+</html>
